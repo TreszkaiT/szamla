@@ -1,5 +1,6 @@
 package com.tresz.szamla.views;
 
+import com.tresz.szamla.viewcontrollers.ProductPropertyController;
 import com.tresz.szamla.views.list.ListView;
 import com.tresz.szamla.views.szamlak.SzamlakView;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -17,7 +18,9 @@ import com.vaadin.flow.router.RouterLink;
 @PageTitle("szamlaadatok")
 public class MainLayout extends AppLayout {
 
-    public MainLayout() {
+    private ProductPropertyController propertyController;
+    public MainLayout(ProductPropertyController propertyController) {
+        this.propertyController = propertyController;
 
         CreateHeader();
         CreateDrawer();
@@ -25,7 +28,7 @@ public class MainLayout extends AppLayout {
 
     private void CreateHeader() {
 
-        H1 logo = new H1("Számla adatok bevitele app");
+        H1 logo = new H1("Számla adatok bevitele app v."+propertyController.getProductVersion());
 
         Button logoutBtn = new Button("Kilépés");
 
