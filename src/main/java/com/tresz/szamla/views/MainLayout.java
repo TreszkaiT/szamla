@@ -1,7 +1,7 @@
-package com.tresz.szamla.view;
+package com.tresz.szamla.views;
 
-import com.tresz.szamla.view.list.ListView;
-import com.tresz.szamla.view.szamlak.SzamlakView;
+import com.tresz.szamla.views.list.ListView;
+import com.tresz.szamla.views.szamlak.SzamlakView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.button.Button;
