@@ -1,5 +1,6 @@
 package com.tresz.szamla.views;
 
+import com.tresz.szamla.viewcontrollers.LoginSecurityController;
 import com.tresz.szamla.viewcontrollers.ProductPropertyController;
 import com.tresz.szamla.views.list.ListView;
 import com.tresz.szamla.views.szamlak.SzamlakView;
@@ -19,8 +20,10 @@ import com.vaadin.flow.router.RouterLink;
 public class MainLayout extends AppLayout {
 
     private ProductPropertyController propertyController;
-    public MainLayout(ProductPropertyController propertyController) {
+    private LoginSecurityController securityController;
+    public MainLayout(ProductPropertyController propertyController, LoginSecurityController securityController) {
         this.propertyController = propertyController;
+        this.securityController = securityController;
 
         CreateHeader();
         CreateDrawer();
@@ -30,7 +33,7 @@ public class MainLayout extends AppLayout {
 
         H1 logo = new H1("Számla adatok bevitele app v."+propertyController.getProductVersion());
 
-        Button logoutBtn = new Button("Kilépés");
+        Button logoutBtn = new Button("Kilépés", e -> securityController.Logout());
 
         HorizontalLayout header = new HorizontalLayout(new DrawerToggle(), logo, logoutBtn);
         header.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);
