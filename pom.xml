@@ -10,6 +10,7 @@
 	<properties>
 		<java.version>18</java.version>
 		<vaadin.version>23.1.7</vaadin.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -186,6 +187,13 @@
 				</configuration>
 			</plugin>
 
+			<!-- Maven Clean Install nem fordult normálisan - ez a hiba volt: Spring Boot Package Error: Failed to execute goal org.apache.maven.plugins:maven-resources-plugin:3.2.0 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version>
+			</plugin>
+
 			<!--
                 Take care of synchronizing java dependencies and imports in
                 package.json and main.js files.
@@ -274,6 +282,7 @@
 							<enableAssertions>true</enableAssertions>
 						</configuration>
 					</plugin>
+
 				</plugins>
 			</build>
 		</profile>
