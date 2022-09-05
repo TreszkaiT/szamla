@@ -127,12 +127,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<dependency>
+		<!--<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.3.0</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency>-->
 		<!-- DOCUMENTATION ez ad egy webes felületet nekünk, melyen fel tudjuk fedezni az egyes endpointokat. http://localhost:8080/swagger-ui/index.html-->
 		<dependency>
 			<groupId>org.springdoc</groupId>
@@ -158,14 +158,14 @@
 			<optional>true</optional>
 		</dependency>
 		<!-- loginform biztonságos belépés miatt. Spring Security függőség -->
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 
 
