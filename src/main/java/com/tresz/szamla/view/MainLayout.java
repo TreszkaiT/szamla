@@ -1,5 +1,7 @@
 package com.tresz.szamla.view;
 
+import com.tresz.szamla.view.list.ListView;
+import com.tresz.szamla.view.szamlak.SzamlakView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.button.Button;
@@ -42,7 +44,8 @@ public class MainLayout extends AppLayout {
         listLink.setHighlightCondition(HighlightConditions.sameLocation());
 
         VerticalLayout menuBar = new VerticalLayout();
-        menuBar.add(listLink);
+        menuBar.add(listLink,
+                new RouterLink("Masik menü", SzamlakView.class));
         menuBar.setHeightFull();
         menuBar.getElement().getThemeList().add("dark");
 

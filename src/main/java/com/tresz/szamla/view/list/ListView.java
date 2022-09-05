@@ -1,5 +1,6 @@
-package com.tresz.szamla.view;
+package com.tresz.szamla.view.list;
 
+import com.tresz.szamla.view.MainLayout;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
