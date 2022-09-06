@@ -1,6 +1,6 @@
 package com.tresz.szamla.viewcontrollers;
 
-import com.tresz.szamla.beans.components.ProductProperty;
+import com.tresz.szamla.datas.components.ProductProperty;
 import org.springframework.stereotype.Controller;
 
 @Controller

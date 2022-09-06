@@ -19,8 +19,8 @@ import com.vaadin.flow.router.RouterLink;
 @PageTitle("szamlaadatok")
 public class MainLayout extends AppLayout {
 
-    private ProductPropertyController propertyController;
-    private LoginSecurityController securityController;
+    private final ProductPropertyController propertyController;
+    private final LoginSecurityController securityController;
     public MainLayout(ProductPropertyController propertyController, LoginSecurityController securityController) {
         this.propertyController = propertyController;
         this.securityController = securityController;
@@ -31,6 +31,7 @@ public class MainLayout extends AppLayout {
 
     private void CreateHeader() {
 
+        //Link
         H1 logo = new H1("Számla adatok bevitele app v."+propertyController.getProductVersion());
 
         Button logoutBtn = new Button("Kilépés", e -> securityController.Logout());

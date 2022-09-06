@@ -1,4 +1,4 @@
-package com.tresz.szamla.beans.components;
+package com.tresz.szamla.datas.components;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
