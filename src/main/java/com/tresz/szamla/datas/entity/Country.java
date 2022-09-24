@@ -1,8 +1,11 @@
 package com.tresz.szamla.datas.entity;
 
+import org.hibernate.envers.Audited;
+
 import javax.persistence.*;
 
 @Entity
+@Audited
 @Table(name = "SZML_COUNTRY")
 public class Country {
 
