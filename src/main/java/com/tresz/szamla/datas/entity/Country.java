@@ -40,5 +40,14 @@ public class Country {
         this.name = name;
         return this;
     }
+
+    public Partner getPartner() {
+        return partner;
+    }
+
+    public Country setPartner(Partner partner) {
+        this.partner = partner;
+        return this;
+    }
 }
 

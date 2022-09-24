@@ -25,6 +25,8 @@ public class Partner extends AbstractEntity{
 
     @OneToOne
     private Country country;
+    @OneToOne
+    private City city;
 
     public Partner() {
     }
@@ -62,6 +64,15 @@ public class Partner extends AbstractEntity{
 
     public Partner setCountry(Country country) {
         this.country = country;
+        return this;
+    }
+
+    public City getCity() {
+        return city;
+    }
+
+    public Partner setCity(City city) {
+        this.city = city;
         return this;
     }
 }
