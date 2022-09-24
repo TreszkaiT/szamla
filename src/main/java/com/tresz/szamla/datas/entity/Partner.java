@@ -1,7 +1,5 @@
 package com.tresz.szamla.datas.entity;
 
-//import org.hibernate.envers.Audited;
-
 import javax.persistence.*;
 
 @Entity
