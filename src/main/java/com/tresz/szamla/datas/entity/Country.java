@@ -14,8 +14,8 @@ public class Country {
     @Column(name = "CNT_NAME")
     private String name;
 
-//    @OneToOne
-//    private Partner partner;
+    @OneToOne(mappedBy = "country")
+    private Partner partner;
 
     public Country() {
     }
