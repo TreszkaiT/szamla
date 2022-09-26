@@ -78,6 +78,9 @@ public class Partner extends AbstractEntity{
     @Column(name = "PRT_EMAIL2")
     private String email2;
 
+    @OneToOne(mappedBy = "partner")
+    private Invoice invoice;
+
 
 
     public Partner() {
