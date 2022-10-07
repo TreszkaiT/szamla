@@ -1,8 +1,9 @@
 package com.tresz.szamla.datas.entity;
 
+import com.tresz.szamla.datas.entity.enums.InvoiceType;
+import com.tresz.szamla.datas.entity.enums.Payment;
 import org.hibernate.envers.Audited;
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -32,6 +33,7 @@ public class Invoice {                          // számla
 
     @OneToOne
     private Partner partner;
+
 
     @Enumerated(EnumType.ORDINAL)
     private Payment payment;
